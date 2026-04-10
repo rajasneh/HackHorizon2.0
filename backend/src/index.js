@@ -71,6 +71,15 @@ app.use("/api/admin", adminRoutes);
 import userRoutes from './routes/userRoutes.js';
 app.use("/api/user", userRoutes);
 
+import bookingRoutes from './routes/bookingRoutes.js';
+app.use("/api/booking", bookingRoutes);
+
+import paymentRoutes from './routes/paymentRoutes.js';
+app.use("/api/payment", paymentRoutes);
+
+import ticketRoutes from './routes/ticketRoutes.js';
+app.use("/api/ticket", ticketRoutes);
+
 
 // Use Socket.IO handler
 io.on('connection', (socket) => {

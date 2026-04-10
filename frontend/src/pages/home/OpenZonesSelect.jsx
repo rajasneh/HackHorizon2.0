@@ -21,7 +21,7 @@ const fetchTicketCategories = async (eventId) => {
       } else {
         fetchedCategories = [{
           ...data.result.price,
-          type: data.result.price.type || "General Ticket",
+          type: data.result.price.type || "default",
           price: data.result.price.price || data.result.price.flatPrice
         }];
       }
@@ -156,7 +156,7 @@ export default function OpenZonesSelect() {
                 return (
                   <div key={cat.id} className="flex items-center justify-between py-2">
                     <div>
-                      <h3 className="text-base font-medium text-gray-900">{cat.type}</h3>
+                      <h3 className="text-base font-medium text-gray-900">{cat.type === "default" ? "General Ticket" : cat.type}</h3>
                       <p className="text-sm text-gray-500">₹{Number(cat.price).toLocaleString()}</p>
                     </div>
                     

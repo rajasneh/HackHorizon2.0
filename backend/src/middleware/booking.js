@@ -307,6 +307,13 @@ const lockSeats = async ({ eventId, item: seats, userId, io }) => {
             const lockKey = `locked:seat:${eventId}:${seat}`;
             
             try {
+                const existingOwner = await redis.get(lockKey);
+                if (existingOwner === userId) {
+                    successfullyLocked.push(seat);
+                    await redis.expire(lockKey, 600);
+                    continue; // Skip the NX set and job creation
+                }
+
                 const result = await redis.set(lockKey, userId, "NX", "EX", 600);
      
                 if (result === null) {
@@ -387,15 +394,21 @@ const lockTickets = async ({ eventId, item, userId, io }) => {
         const categoryMap = new Map(categoryResults.map(cat => [cat.type, cat]));
         const defaultPrice = priceResults[0];
 
-        // Batch get all tempLock keys for better performance
+        // Batch get all tempLock keys and user lock keys for better performance
         const tempLockKeys = item.map(ticket => `tickets:tempLock:${eventId}:${ticket.type}`);
-        const tempLockValues = await redis.mget(tempLockKeys);
+        const userLockKeys = item.map(ticket => `tickets:lock:${eventId}:${ticket.type}:${userId}`);
+        const tempLockValues = tempLockKeys.length > 0 ? await redis.mget(tempLockKeys) : [];
+        const userLockValues = userLockKeys.length > 0 ? await redis.mget(userLockKeys) : [];
         
         for (let i = 0; i < item.length; i++) {
             const ticket = item[i];
             const { type, count } = ticket;
 
-            const lockKey = `tickets:lock:${eventId}:${type}:${userId}`;
+            const lockKey = userLockKeys[i];
+            const tempLockKey = tempLockKeys[i];
+
+            const existingUserLockCount = parseInt(userLockValues[i]) || 0;
+            const diffToLock = count - existingUserLockCount;
 
             let ticketInfo = categoryMap.get(type);
             if (!ticketInfo && type === "default" && defaultPrice) {
@@ -411,16 +424,17 @@ const lockTickets = async ({ eventId, item, userId, io }) => {
             const lockedTemp = parseInt(tempLockValues[i]) || 0;
             const available = numberOfTickets - ticketsSold - lockedTemp;
 
-            if (available < count) {
+            if (diffToLock > 0 && available < diffToLock) {
                 failedTypes.push({ type, requested: count, available });
                 continue;
             }
 
             try {
-                const tempLockKey = `tickets:tempLock:${eventId}:${type}`;
                 const pipeline = redis.multi();
                 pipeline.set(lockKey, count, "EX", 600);
-                pipeline.incrby(tempLockKey, count);
+                if (diffToLock !== 0) {
+                    pipeline.incrby(tempLockKey, diffToLock);
+                }
                 pipeline.expire(tempLockKey, 600);
                 const results = await pipeline.exec();
 
@@ -441,8 +455,11 @@ const lockTickets = async ({ eventId, item, userId, io }) => {
                     count,
                     userId,
                 }, {
+                    jobId: `unlock-ticket-${eventId}-${type}-${userId}`,
                     delay: 600000, // 10 minutes
                     attempts: 1,
+                    removeOnComplete: true,
+                    removeOnFail: true
                 });
             } catch (redisError) {
                 console.error(`Redis error for ticket ${type}:`, {

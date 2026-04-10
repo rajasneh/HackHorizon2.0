@@ -55,11 +55,12 @@ function BookingSummary() {
     
     const eventType = eventDetails.type;
     try {
-      await axios.post(import.meta.env.VITE_BASE_URL + '/api/booking/unlock-items', {
+      const res = await axios.post(import.meta.env.VITE_BASE_URL + '/api/booking/unlock-items', {
         eventId,
         userId,
         eventType,
       });
+      console.log('Unlock items response:', res.data);
     } catch (err) {
       if (err.response?.status === 400) {
         throw new Error('Invalid unlock request data');
@@ -108,6 +109,7 @@ function BookingSummary() {
         console.log('Sending booking request:', body);
         const res = await axios.post(import.meta.env.VITE_BASE_URL + '/api/booking/get-booking-summary', body);
         setSummary(res.data);
+        console.log('Booking summary response:', res.data);
       } catch (err) {
         if (err.response?.status === 409) {
           const errorData = err.response.data;

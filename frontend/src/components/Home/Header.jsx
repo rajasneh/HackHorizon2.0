@@ -168,10 +168,10 @@ export const Header = ({ onLocationClick, currentCity, events = [] }) => {
       }`}>
         <div className="flex gap-4 sm:gap-6 lg:gap-8">
           {[
-            { to: "/category/movie", label: "Movies", icon: "🎬" },
-            { to: "/category/hackathon", label: "Hackathons", icon: "📺" },
-            { to: "/category/concert", label: "Concerts", icon: "🎵" },
-            { to: "/category/workshop", label: "Workshops", icon: "🎨" }
+            { to: "/category/theatre", label: "Theatre", icon: "🎬" },
+            { to: "/category/activities", label: "Activities", icon: "📺" },
+            { to: "/category/sports", label: "Sports", icon: "🎵" },
+            { to: "/category/recreation", label: "Recreation", icon: "🎨" }
           ].map((item) => (
             <NavLink 
               key={item.label}
