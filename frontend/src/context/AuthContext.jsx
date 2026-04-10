@@ -10,8 +10,8 @@ export const AuthProvider = ({ children }) => {
 
   // Load email and user from localStorage on mount
   useEffect(() => {
-    const savedUser = localStorage.getItem("tktplz_user");
-    const savedEmail = localStorage.getItem("tktplz_email");
+    const savedUser = localStorage.getItem("meetz_user");
+    const savedEmail = localStorage.getItem("meetz_email");
 
     if (savedUser) setUser(JSON.parse(savedUser));
     if (savedEmail) setEmailData(savedEmail);
@@ -20,18 +20,18 @@ export const AuthProvider = ({ children }) => {
   // Save user to localStorage on change
   useEffect(() => {
     if (user) {
-      localStorage.setItem("tktplz_user", JSON.stringify(user));
+      localStorage.setItem("meetz_user", JSON.stringify(user));
     } else {
-      localStorage.removeItem("tktplz_user");
+      localStorage.removeItem("meetz_user");
     }
   }, [user]);
 
   // Save emailData to localStorage on change
   useEffect(() => {
     if (emailData) {
-      localStorage.setItem("tktplz_email", emailData);
+      localStorage.setItem("meetz_email", emailData);
     } else {
-      localStorage.removeItem("tktplz_email");
+      localStorage.removeItem("meetz_email");
     }
   }, [emailData]);
 

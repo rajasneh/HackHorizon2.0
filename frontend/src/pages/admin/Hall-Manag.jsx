@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { LocationPicker } from "../../components/Other/LocationPicker";
 import axios from "axios";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { TktPlzSpinner } from "../../components/Other/Spinner";
+import { MeetzSpinner } from "../../components/Other/Spinner";
 import { toast } from "react-hot-toast";
 import { useAuth } from "../../context/AuthContext";
 import { EditHall } from './EditHall';
@@ -162,8 +162,8 @@ export const HallManagement = () => {
     }
   };
 
-  if (!user) return <TktPlzSpinner />;
-  if (isLoading) return <TktPlzSpinner />;
+  if (!user) return <MeetzSpinner />;
+  if (isLoading) return <MeetzSpinner />;
   if (isError) return (
     <div className="flex items-center justify-center min-h-screen">
       <div className="text-center">
@@ -176,7 +176,7 @@ export const HallManagement = () => {
   );
 
   // Add null check for data
-  if (!data) return <TktPlzSpinner />;
+  if (!data) return <MeetzSpinner />;
 
   const hallsData = data.result;
   const hallList = Array.isArray(hallsData) ? hallsData : [];

@@ -3,7 +3,7 @@ import { CardSection } from "../../components/Home/CardSection";
 import { Header } from "../../components/Home/Header";
 import ImageCarousel from "../../components/Home/ImageCarousel";
 import { useAuth } from "../../context/AuthContext";
-import { TktPlzLoader } from "../../components/Other/TktPlzLoader";
+import { MeetzLoader } from "../../components/Other/MeetzLoader";
 import { useEffect, useState } from "react";
 import { getAllEvents } from "../../api/Home";
 import { useQuery } from "@tanstack/react-query";
@@ -103,7 +103,7 @@ export const HomePage = () => {
     queryFn: getAllEvents
   });
 
-  if (isLoading) return <TktPlzLoader />;
+  if (isLoading) return <MeetzLoader />;
   if (error) return <div>Error: {error.message}</div>;
 
   const allEvents = data?.data || [];
@@ -134,7 +134,7 @@ export const HomePage = () => {
       />
 
       {loading ? (
-        <TktPlzLoader />
+        <MeetzLoader />
       ) : (
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
 
@@ -229,7 +229,7 @@ export const HomePage = () => {
           <div className="flex items-center gap-2">
             <img
               src="https://res.cloudinary.com/dgxc8nspo/image/upload/v1775822761/meetzz_oovah3.png"
-              alt="TKTPLZ Logo"
+              alt="meetz Logo"
               className="h-12 w-auto object-cover object-center rounded-lg"
             />
           </div>
@@ -240,12 +240,12 @@ export const HomePage = () => {
             <a href="https://merchant.razorpay.com/policy/R2MMboAezIFPUs/refund" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-gray-500 hover:text-blue-600 transition"><Undo2 size={18} />Cancellation &amp; Refunds</a>
           </div>
           <div className="flex gap-3">
-            <a href="https://www.instagram.com/tktplz" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pink-500 transition"><Instagram size={24} /></a>
-            <a href="mailto:support@tktplz.com" className="text-gray-400 hover:text-blue-500 transition"><Mail size={24} /></a>
+            <a href="https://www.instagram.com/meetz" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pink-500 transition"><Instagram size={24} /></a>
+            <a href="mailto:support@meetz.com" className="text-gray-400 hover:text-blue-500 transition"><Mail size={24} /></a>
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-4 pb-4 text-gray-500 text-xs text-center">
-          &copy; {new Date().getFullYear()} TKTPLZ. All rights reserved. <span className="hidden sm:inline">|</span> Made with <span className="text-red-500">&#10084;</span> for event lovers.
+          &copy; {new Date().getFullYear()} meetz. All rights reserved. <span className="hidden sm:inline">|</span> Made with <span className="text-red-500">&#10084;</span> for event lovers.
         </div>
       </footer>
     </div>

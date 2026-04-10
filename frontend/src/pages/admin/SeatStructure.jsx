@@ -56,7 +56,7 @@ export default function SeatStructure() {
       {/* Fixed Header */}
       <div className="sticky top-0 z-40 bg-white shadow-md py-2 sm:py-3 md:py-4 px-3 sm:px-4 md:px-6 w-full border-b border-gray-200">
         <div className="flex items-center justify-between">
-          {/* Left: Back button (mobile) / tktplz Logo (desktop) */}
+          {/* Left: Back button (mobile) / meetz Logo (desktop) */}
           <div className="flex-shrink-0">
             {/* Mobile: Back button */}
             <button
@@ -71,7 +71,7 @@ export default function SeatStructure() {
             {/* Desktop: Logo */}
             <img
               src="https://res.cloudinary.com/dgxc8nspo/image/upload/v1756377392/posters/aezej67pxo3kucstndsv.png"
-              alt="tktplz Logo"
+              alt="meetz Logo"
               className="hidden sm:block h-7 md:h-8 w-auto rounded-lg shadow-sm"
             />
           </div>

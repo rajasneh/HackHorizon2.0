@@ -67,7 +67,7 @@ export const OrganiserRegisterPage = () => {
 
                 <h1 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4 mt-6 md:mt-10 text-center">Join as Organiser!</h1>
                 <p className="text-base md:text-lg text-center max-w-xs md:max-w-md">
-                    Create, promote, and manage your events effortlessly with <span className="font-semibold">TktPlz</span>. Start building your event empire today!
+                    Create, promote, and manage your events effortlessly with <span className="font-semibold">meetz</span>. Start building your event empire today!
                 </p>
             </div>
 

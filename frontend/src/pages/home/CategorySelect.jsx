@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { CardSection } from "../../components/Home/CardSection";
-import { TktPlzLoader } from "../../components/Other/TktPlzLoader";
+import { MeetzLoader } from "../../components/Other/MeetzLoader";
 import { useLocation } from "../../context/LocationContext";
 import { FiArrowLeft } from "react-icons/fi";
 
@@ -52,7 +52,7 @@ const CategorySelect = () => {
 
         {/* Loading State */}
         {loading ? (
-          <TktPlzLoader />
+          <MeetzLoader />
         ) : error ? (
           <div className="text-center py-10 text-red-500 font-semibold text-lg">{error}</div>
         ) : events.length === 0 ? (

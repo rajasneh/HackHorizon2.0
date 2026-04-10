@@ -72,7 +72,7 @@ const RazorpayButton = ({ totalAmount, summary }) => {
                 key: import.meta.env.VITE_RAZORPAY_KEY || "rzp_test_your_key",
                 amount: orderData.amount,
                 currency: "INR",
-                name: "TktPlz", 
+                name: "meetz", 
                 description: `Booking for ${eventDetails.eventName || 'Event'}`,
                 order_id: orderData.orderId,
                 handler: async (response) => {

@@ -114,7 +114,7 @@ const ReportIssue = () => {
         <div className="bg-white rounded-lg shadow-lg p-6 sm:p-8 max-w-sm sm:max-w-md w-full text-center border border-gray-200">
           <img 
             src="/images/logo2.PNG" 
-            alt="TktPlz Logo" 
+            alt="meetz Logo" 
             className="h-10 sm:h-12 w-auto mx-auto mb-4 sm:mb-6"
           />
           <div className="w-14 h-14 sm:w-16 sm:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -161,7 +161,7 @@ const ReportIssue = () => {
             
             <img 
               src="/images/logo2.PNG" 
-              alt="TktPlz Logo" 
+              alt="meetz Logo" 
               className="h-12 sm:h-16 w-auto mb-4 sm:mb-6"
             />
             

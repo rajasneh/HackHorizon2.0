@@ -77,7 +77,7 @@ export const Header = ({ onLocationClick, currentCity, events = [] }) => {
           <div className="relative">
             <img 
               src="https://res.cloudinary.com/dgxc8nspo/image/upload/v1775822761/meetzz_oovah3.png" 
-              alt="TktPlz Logo" 
+              alt="meetz Logo" 
               className="h-8 sm:h-10 transition-transform duration-300 group-hover:scale-110" 
             />
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>

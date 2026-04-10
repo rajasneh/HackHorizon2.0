@@ -1,5 +1,5 @@
 function LoadingSpinner({ message }) {
-    // Using specific blue and orange colors from the tktplz logo
+    // Using specific blue and orange colors from the meetz logo
     const blueColor = '#007bff'; // A vibrant blue
     const orangeColor = '#fd7e14'; // A vibrant orange
   

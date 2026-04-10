@@ -7,8 +7,8 @@ const PrivacyPolicy = () => {
         <h1 className="text-3xl font-extrabold text-gray-900 mb-2 text-center">Privacy Policy</h1>
         <p className="text-gray-500 text-center mb-8">Effective Date: <span className="font-semibold">[Insert Date]</span></p>
         <div className="space-y-6 text-gray-700 text-base">
-          <p>At TktPlz (“we,” “our,” “us”), your privacy is very important to us. This Privacy Policy explains how we collect, use, store, and protect your personal information when you use our website, mobile application, and related services (collectively, the “Platform”).</p>
-          <p>By using TktPlz, you agree to the terms of this Privacy Policy. If you do not agree, please discontinue use of our Platform.</p>
+          <p>At meetz (“we,” “our,” “us”), your privacy is very important to us. This Privacy Policy explains how we collect, use, store, and protect your personal information when you use our website, mobile application, and related services (collectively, the “Platform”).</p>
+          <p>By using meetz, you agree to the terms of this Privacy Policy. If you do not agree, please discontinue use of our Platform.</p>
           <h2 className="text-xl font-bold mt-8 mb-2">1. Information We Collect</h2>
           <ul className="list-disc pl-6 mb-4">
             <li className="mb-2"><span className="font-semibold">Personal Information</span>
@@ -78,7 +78,7 @@ const PrivacyPolicy = () => {
           <h2 className="text-xl font-bold mt-8 mb-2">8. Third-Party Links</h2>
           <p>Our Platform may contain links to third-party websites. We are not responsible for the privacy practices or content of such external sites.</p>
           <h2 className="text-xl font-bold mt-8 mb-2">9. Children’s Privacy</h2>
-          <p>TktPlz does not knowingly collect data from children under 13 years of age. If you believe a child has provided us with personal data, please contact us to remove it.</p>
+          <p>meetz does not knowingly collect data from children under 13 years of age. If you believe a child has provided us with personal data, please contact us to remove it.</p>
           <h2 className="text-xl font-bold mt-8 mb-2">10. Updates to This Policy</h2>
           <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated “Effective Date.”</p>
           <h2 className="text-xl font-bold mt-8 mb-2">11. Contact Us</h2>

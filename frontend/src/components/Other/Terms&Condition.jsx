@@ -12,7 +12,7 @@ export const TermsAndConditions = () => {
         </p>
         
         <p className="leading-relaxed">
-          Welcome to TktPlz. Please read these terms and conditions carefully before using our platform.
+          Welcome to meetz. Please read these terms and conditions carefully before using our platform.
         </p>
 
         <div className="bg-blue-50 rounded-lg p-3 sm:p-4 border-l-4 border-blue-400">
@@ -27,7 +27,7 @@ export const TermsAndConditions = () => {
             <li className="flex items-start gap-2">
               <span className="text-blue-600 mt-1 flex-shrink-0">•</span>
               <span className="text-xs sm:text-sm leading-relaxed">
-                Tickets are non-transferrable and non-refundable except in cases where the event is canceled by the organizers or due to technical issues recognized by TktPlz.
+                Tickets are non-transferrable and non-refundable except in cases where the event is canceled by the organizers or due to technical issues recognized by meetz.
               </span>
             </li>
           </ul>
@@ -60,7 +60,7 @@ export const TermsAndConditions = () => {
         <div className="bg-gray-50 rounded-lg p-3 sm:p-4">
           <h2 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Intellectual Property</h2>
           <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
-            All content on TktPlz, including text, logos, graphics, and media, is the intellectual property of TktPlz or its respective rights holders.
+            All content on meetz, including text, logos, graphics, and media, is the intellectual property of meetz or its respective rights holders.
           </p>
         </div>
 
@@ -69,10 +69,10 @@ export const TermsAndConditions = () => {
           <p className="text-xs sm:text-sm text-purple-800 leading-relaxed">
             For any inquiries, please reach us at{' '}
             <a 
-              href="mailto:support@tktplz.com" 
+              href="mailto:support@meetz.com" 
               className="text-purple-600 hover:text-purple-800 underline font-medium break-all"
             >
-              support@tktplz.com
+              support@meetz.com
             </a>
           </p>
         </div>

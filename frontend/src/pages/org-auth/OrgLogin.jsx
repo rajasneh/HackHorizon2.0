@@ -63,7 +63,7 @@ export const OrganiserLoginPage = () => {
 
                 <h1 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4 mt-6 md:mt-10 text-center">Welcome Organiser!</h1>
                 <p className="text-base md:text-lg text-center max-w-xs md:max-w-md">
-                    Manage your events, track ticket sales, and create amazing experiences with <span className="font-semibold">TktPlz</span>. Your journey to powerful event hosting starts here.
+                    Manage your events, track ticket sales, and create amazing experiences with <span className="font-semibold">meetz</span>. Your journey to powerful event hosting starts here.
                 </p>
             </div>
 

@@ -6,7 +6,7 @@ import { FcGoogle } from "react-icons/fc";
 import { MdPhoneAndroid } from "react-icons/md";
 import { handleGoogleLogin } from "../../components/Home/GoogleLogin";
 import { useModal } from "../../context/ModalContext";
-import { TktPlzSpinner } from "../../components/Other/Spinner";
+import { MeetzSpinner } from "../../components/Other/Spinner";
 import { useAuth } from "../../context/AuthContext";
 import { FaTelegramPlane } from "react-icons/fa";
 
@@ -85,7 +85,7 @@ export const LoginPage = () => {
                 {
                     loading ? (
                         <div className="h-[200px]">
-                            <TktPlzSpinner />
+                            <MeetzSpinner />
                         </div>
                     ) : (
                         <div

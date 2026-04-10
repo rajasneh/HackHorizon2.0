@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useBookingStore } from '../../store/bookingStore';
 import axios from 'axios';
-import { TktPlzSpinner } from '../../components/Other/Spinner';
+import { MeetzSpinner } from '../../components/Other/Spinner';
 import { useAuth } from "../../context/AuthContext";
 import RazorpayButton from "../../components/Other/RazorpayButton";
 
@@ -248,7 +248,7 @@ function BookingSummary() {
         </div>
 
         {loading ? (
-          <div className="flex justify-center items-center h-64"><TktPlzSpinner /></div>
+          <div className="flex justify-center items-center h-64"><MeetzSpinner /></div>
         ) : error ? (
           <div className="bg-red-50 border border-red-200 rounded-lg p-6 text-center">
             <div className="text-red-600 font-medium mb-4">{error}</div>

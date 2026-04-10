@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
 import { useAuth } from "../../context/AuthContext";
-import { TktPlzSpinner } from "../../components/Other/Spinner";
+import { MeetzSpinner } from "../../components/Other/Spinner";
 
 export const AuthSuccess = () => {
     const navigate = useNavigate();
@@ -44,7 +44,7 @@ export const AuthSuccess = () => {
     return (
         <div className="min-h-screen flex items-center justify-center">
             {GoogleLoginLoading ? (
-                <TktPlzSpinner />
+                <MeetzSpinner />
             ) : (
                 <p className="text-gray-600">Redirecting...</p>
             )}

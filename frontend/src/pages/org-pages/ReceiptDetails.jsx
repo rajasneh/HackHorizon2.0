@@ -48,7 +48,7 @@ const ReceiptDetails = () => {
   <div className="w-full max-w-5xl bg-white border border-gray-300 rounded-xl shadow-2xl p-0 mx-2 sm:mx-4 my-6 sm:my-10">
         {/* Receipt Header */}
         <div className="flex flex-col items-center py-8 border-b border-gray-200">
-          {/* <img src={logoUrl} alt="TKTPLZ Logo" className="h-20 w-auto mb-2" style={{objectFit: 'cover', objectPosition: 'center top', borderRadius: '12px'}} /> */}
+          {/* <img src={logoUrl} alt="meetz Logo" className="h-20 w-auto mb-2" style={{objectFit: 'cover', objectPosition: 'center top', borderRadius: '12px'}} /> */}
           <div className="flex items-center gap-3 mt-1">
             <span className="text-sm text-gray-500">Income Receipt</span>
             {receipt.status === 'paid' ? (
@@ -159,7 +159,7 @@ const ReceiptDetails = () => {
         </div>
         {/* Footer */}
         <div className="border-t border-gray-200 px-8 py-4 text-xs text-gray-400 text-center">
-          Thank you for using TKTPLZ. This is a system generated receipt.
+          Thank you for using meetz. This is a system generated receipt.
         </div>
       </div>
     </div>

@@ -98,7 +98,7 @@ export const Sidebar = () => {
                     <div className="p-5 bg-gradient-to-r from-blue-50 to-blue-100 border-b border-blue-200">
                         <div className="text-center mb-4">
                             <FiUser className="w-8 h-8 mx-auto text-blue-600 mb-2" />
-                            <h3 className="text-lg font-semibold text-gray-800">Welcome to TktPlz</h3>
+                            <h3 className="text-lg font-semibold text-gray-800">Welcome to meetz</h3>
                             <p className="text-sm text-gray-600 mt-1">Sign in to access your bookings and offers</p>
                         </div>
                         <button

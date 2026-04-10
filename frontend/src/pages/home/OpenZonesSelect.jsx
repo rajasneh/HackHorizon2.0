@@ -103,7 +103,7 @@ export default function OpenZonesSelect() {
       <div className="absolute top-4 left-4 z-10">
         <img 
           src="/images/logo2.PNG" 
-          alt="tktplz" 
+          alt="meetz" 
           className="h-8 w-auto"
         />
       </div>

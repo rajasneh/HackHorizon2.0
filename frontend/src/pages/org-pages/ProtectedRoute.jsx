@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
-import { TktPlzSpinner } from "../../components/Other/Spinner"
+import { MeetzSpinner } from "../../components/Other/Spinner"
 
 export const ProtectedRoute = ({ children }) => {
   const [access, setAccess] = useState(null);
@@ -32,7 +32,7 @@ export const ProtectedRoute = ({ children }) => {
   if (access === null) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-white">
-        <TktPlzSpinner />
+        <MeetzSpinner />
       </div>
     );
   }

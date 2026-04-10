@@ -1,6 +1,6 @@
-import './TktPlzSpinner.css';
+import './MeetzSpinner.css';
 
-export const TktPlzSpinner = () => {
+export const MeetzSpinner = () => {
   return (
     <div className="flex justify-center items-center w-full h-full">
       <div className="relative w-24 h-24">

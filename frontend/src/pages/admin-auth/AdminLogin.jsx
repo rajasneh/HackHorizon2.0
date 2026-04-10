@@ -35,7 +35,7 @@ export const AdminLoginPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center items-center px-4">
       <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md">
-        <h1 className="text-3xl font-bold text-center text-[#1A73E8] mb-6">TktPlz Admin Login</h1>
+        <h1 className="text-3xl font-bold text-center text-[#1A73E8] mb-6">meetz Admin Login</h1>
 
         <form onSubmit={handleLogin} className="space-y-5">
           <div>

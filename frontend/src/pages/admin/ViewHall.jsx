@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import axios from 'axios';
-import { TktPlzSpinner } from '../../components/Other/Spinner';
+import { MeetzSpinner } from '../../components/Other/Spinner';
 import { EditHall } from './EditHall';
 import { 
   MapPin, 
@@ -49,7 +49,7 @@ export const ViewHall = () => {
     enabled: !!hallId,
   });
 
-  if (isLoading) return <TktPlzSpinner />;
+  if (isLoading) return <MeetzSpinner />;
   if (isError) return (
     <div className="flex items-center justify-center min-h-screen">
       <div className="text-center">

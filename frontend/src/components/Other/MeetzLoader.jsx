@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const TktPlzLoader = () => {
+export const MeetzLoader = () => {
   return (
     <div className="fixed inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 flex items-center justify-center z-50">
       <div className="text-center">
@@ -8,7 +8,7 @@ export const TktPlzLoader = () => {
         <div className="mb-8 animate-pulse">
           <img 
             src="/images/logo2.PNG" 
-            alt="TktPlz" 
+            alt="meetz" 
             className="w-32 h-32 mx-auto object-contain"
           />
         </div>
