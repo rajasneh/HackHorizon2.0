@@ -13,8 +13,22 @@ const fetchTicketCategories = async (eventId) => {
     const res = await fetch(`${import.meta.env.VITE_BASE_URL}/api/event/get-price-details/${eventId}`);
     if (!res.ok) throw new Error("Failed to fetch");
     const data = await res.json();
+    console.log("Data : ", data);
+    let fetchedCategories = [];
+    if (data.result?.price) {
+      if (Array.isArray(data.result.price)) {
+        fetchedCategories = data.result.price;
+      } else {
+        fetchedCategories = [{
+          ...data.result.price,
+          type: data.result.price.type || "General Ticket",
+          price: data.result.price.price || data.result.price.flatPrice
+        }];
+      }
+    }
+
     return {
-      categories: data.result?.price || [],
+      categories: fetchedCategories,
       showTime: data.result?.event?.scheduleStart
         ? new Date(data.result.event.scheduleStart).toLocaleString("en-GB", {
             day: "2-digit",
