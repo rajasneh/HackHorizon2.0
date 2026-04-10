@@ -1,7 +1,6 @@
 function LoadingSpinner({ message }) {
-    // Using specific blue and orange colors from the meetz logo
-    const blueColor = '#007bff'; // A vibrant blue
-    const orangeColor = '#fd7e14'; // A vibrant orange
+    // Using specific red color from the meetz logo
+    const meetzRed = '#CD2128'; 
   
     return (
       <div className="fixed inset-0  bg-opacity-75 flex flex-col justify-center items-center z-50 p-4">
@@ -10,15 +9,15 @@ function LoadingSpinner({ message }) {
           <div className="flex space-x-2 mb-6">
             <div
               className="w-4 h-4 rounded-full animate-bounce-dot"
-              style={{ backgroundColor: blueColor, animationDelay: '0s' }}
+              style={{ backgroundColor: meetzRed, animationDelay: '0s' }}
             ></div>
             <div
               className="w-4 h-4 rounded-full animate-bounce-dot"
-              style={{ backgroundColor: orangeColor, animationDelay: '0.2s' }}
+              style={{ backgroundColor: meetzRed, animationDelay: '0.2s' }}
             ></div>
             <div
               className="w-4 h-4 rounded-full animate-bounce-dot"
-              style={{ backgroundColor: blueColor, animationDelay: '0.4s' }}
+              style={{ backgroundColor: meetzRed, animationDelay: '0.4s' }}
             ></div>
           </div>
   

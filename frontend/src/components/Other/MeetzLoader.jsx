@@ -15,12 +15,12 @@ export const MeetzLoader = () => {
         
         {/* Loading Bar */}
         <div className="w-64 h-2 bg-gray-200 rounded-full overflow-hidden">
-          <div className="h-full bg-gradient-to-r from-blue-500 to-purple-600 rounded-full animate-loading-bar"></div>
+         <div className="h-full bg-[#CD2128] rounded-full animate-loading-bar"></div>
         </div>
         
         {/* Loading Text */}
         <p className="mt-6 text-gray-600 font-medium text-lg animate-pulse">
-          Loading amazing experiences... <br /> It may take a minute to load due to free hosting!
+          Loading amazing experiences... <br />
         </p>
       </div>
       
