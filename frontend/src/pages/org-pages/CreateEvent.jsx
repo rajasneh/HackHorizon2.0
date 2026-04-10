@@ -15,9 +15,9 @@ const eventTypes = [
 
 const subTypes = {
     Online: ["Webinar", "Workshop", "Live Stream", "Other"],
-    Seating: ["Movie", "Concert", "Conference", "Other"],
+    Seating: ["Theatre", "Concert", "Conference", "Other"],
     Registration: ["Hackathon", "Concert", "Conference", "Other"],
-    Open: ["Concert", "Other"]
+    Open: ["Concert", "Marathon", "Seminar", "Hobby Meetups", "Street Jams", "Other"]
 };
 
 export const CreateEvent = () => {

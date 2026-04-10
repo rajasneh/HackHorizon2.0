@@ -258,7 +258,7 @@ export const ProtectedOrganiserLayout = () => {
                     {/* Logo and Brand */}
                     <div className="flex flex-col items-center gap-1">
                         <img
-                            src="https://res.cloudinary.com/dgxc8nspo/image/upload/v1749873899/maw2lnlkowbftjvtldna.png"
+                            src="https://res.cloudinary.com/dgxc8nspo/image/upload/v1775822761/meetzz_oovah3.png"
                             alt="TktPlz"
                             className="w-26 h-8 object-cover object-center"
                         />

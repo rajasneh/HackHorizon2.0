@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { formatInTimeZone } from "date-fns-tz";
 
-const logoUrl = 'https://res.cloudinary.com/dgxc8nspo/image/upload/v1749873899/maw2lnlkowbftjvtldna.png';
+const logoUrl = 'https://res.cloudinary.com/dgxc8nspo/image/upload/v1775822761/meetzz_oovah3.png';
 
 const ReceiptDetails = () => {
   const { id } = useParams();
