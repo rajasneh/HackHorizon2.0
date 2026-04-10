@@ -120,6 +120,8 @@ export const HomePage = () => {
   });
   const hackathons = allEvents.filter(event => event.type === 'Registration' && event.sub_type === 'Hackathon');
 
+  const hasAnyEvents = movieEvents.length > 0 || liveEvents.length > 0 || onlineEvents.length > 0 || hackathons.length > 0 || upcomingEvents.length > 0;
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       <Header onLocationClick={() => setCityModalOpen(true)} currentCity={city} events={filteredEvents} />
@@ -137,6 +139,29 @@ export const HomePage = () => {
         <MeetzLoader />
       ) : (
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+
+          {/* Empty State */}
+          {!hasAnyEvents && city && (
+            <div className="flex flex-col items-center justify-center py-20 px-4 text-center">
+              <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 max-w-md w-full">
+                <div className="w-16 h-16 bg-red-50 text-[#CD2128] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.29-1.009-5.824-2.562M15 6.306a7.962 7.962 0 00-6 0m6 0V5a2 2 0 00-2-2H9a2 2 0 00-2 2v1.306" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Oops! No events found</h3>
+                <p className="text-gray-500 mb-6">
+                  We couldn't find any events scheduled in <span className="font-semibold text-gray-700">{city}</span> right now. Please check back later or try a different city.
+                </p>
+                <button 
+                  onClick={() => setCityModalOpen(true)}
+                  className="px-6 py-2.5 bg-[#CD2128] hover:bg-[#A91D22] text-white font-medium rounded-xl transition-colors duration-200"
+                >
+                  Change City
+                </button>
+              </div>
+            </div>
+          )}
 
           {/* Hero Section */}
           {/* <section className="relative">
