@@ -7,6 +7,7 @@ import dotenv from 'dotenv';
 import multer from "multer";
 import { Server } from "socket.io"
 import http from 'http';
+import { socketHandler } from './utils/socketHandler.js';
 dotenv.config();
 
 const server = http.createServer(app);
