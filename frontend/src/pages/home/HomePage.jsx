@@ -9,6 +9,7 @@ import { getAllEvents } from "../../api/Home";
 import { useQuery } from "@tanstack/react-query";
 import { useLocation } from "../../context/LocationContext";
 import { Instagram, Mail, Info, FileText, Undo2, Truck } from "lucide-react";
+import { Assistant } from "../../components/Home/Assistant";
 
 const allCities = [
   "Mumbai", "Delhi-NCR", "Bengaluru", "Hyderabad", "Ahmedabad", "Chandigarh", "Chennai", "Pune", "Kolkata", "Kochi",
@@ -248,6 +249,10 @@ export const HomePage = () => {
           )}
         </div>
       )}
+
+      {/* Floating Assistant Widget */}
+      <Assistant />
+
       {/* Footer */}
       <footer className="w-full bg-white border-t border-gray-200 mt-10">
         <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-6">
@@ -275,4 +280,4 @@ export const HomePage = () => {
       </footer>
     </div>
   );
-}
+}

@@ -80,6 +80,9 @@ app.use("/api/payment", paymentRoutes);
 import ticketRoutes from './routes/ticketRoutes.js';
 app.use("/api/ticket", ticketRoutes);
 
+import aiRoutes from "./routes/aiRoutes.js";
+app.use("/api/ai", aiRoutes);
+
 
 // Use Socket.IO handler
 io.on('connection', (socket) => {

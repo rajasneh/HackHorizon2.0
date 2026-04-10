@@ -1,6 +1,6 @@
 import { decimal, mysqlTable, timestamp, varchar } from 'drizzle-orm/mysql-core';
 import { v4 as uuidv4 } from 'uuid';
-import { events } from './eventSchema';
+import { events } from './eventSchema.js';
 import { users } from './userSchema.js';
 
 
