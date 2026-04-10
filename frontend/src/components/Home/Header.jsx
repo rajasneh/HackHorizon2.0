@@ -76,7 +76,7 @@ export const Header = ({ onLocationClick, currentCity, events = [] }) => {
         <div className="flex items-center group">
           <div className="relative">
             <img 
-              src="https://res.cloudinary.com/dgxc8nspo/image/upload/v1756377392/posters/aezej67pxo3kucstndsv.png" 
+              src="https://res.cloudinary.com/dgxc8nspo/image/upload/v1775819415/meetz_os0kkm.png" 
               alt="TktPlz Logo" 
               className="h-8 sm:h-10 transition-transform duration-300 group-hover:scale-110" 
             />

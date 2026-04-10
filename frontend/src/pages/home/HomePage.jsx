@@ -228,7 +228,7 @@ export const HomePage = () => {
         <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2">
             <img
-              src="https://res.cloudinary.com/dgxc8nspo/image/upload/v1756377392/posters/aezej67pxo3kucstndsv.png"
+              src="https://res.cloudinary.com/dgxc8nspo/image/upload/v1775819415/meetz_os0kkm.png"
               alt="TKTPLZ Logo"
               className="h-12 w-auto object-cover object-center rounded-lg"
             />
