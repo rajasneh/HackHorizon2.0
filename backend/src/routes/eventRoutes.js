@@ -1,6 +1,6 @@
 import express from 'express';
 const router = express.Router();
-import { upload } from '../middlewares/multer.js';
+import { upload } from '../middleware/multer.js';
  
 
 // seating event
@@ -16,12 +16,6 @@ import { openEvent, zonesController } from '../eventStrategies/openEvent.js';
 router.post("/create/Open", openEvent);
 router.post("/create/zones", zonesController);
 
-// registration event
-import { registrationEvent, registerAllAtOnce } from '../eventStrategies/registrationEvent.js';
-import { uploadPoster, updateEventPosterUrl, getOrganiserEvents, updateEventDetails, getEventTicketDetails, updateEventTicketDetails, deleteEvent, getAllEvents, getPriceDetails, getRegistrationFields, getBookedSeats, getEventsWithType } from '../controller/eventController.js';
-router.post("/create/Registration", registrationEvent);
-router.post("/register-for-event", registerAllAtOnce);
-
 
 // upload poster route
 router.post("/upload-poster", upload.single("poster"), uploadPoster); 
@@ -30,7 +24,7 @@ router.post("/upload-poster", upload.single("poster"), uploadPoster);
 router.post("/dismiss-event", dismissEvent);
 
 // available halls and screens  
-import { availableHalls, availableScreens, getEventDetails } from '../controller/eventController.js';  
+import { availableHalls, availableScreens, deleteEvent, getAllEvents, getBookedSeats, getEventDetails, getEventsWithType, getEventTicketDetails, getOrganiserEvents, getPriceDetails, getRegistrationFields, updateEventDetails, updateEventPosterUrl, updateEventTicketDetails, uploadPoster } from '../controller/eventController.js';  
 router.get("/available-halls", availableHalls);
 router.get("/available-screens/:hallID", availableScreens);
 

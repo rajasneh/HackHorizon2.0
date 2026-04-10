@@ -3,7 +3,7 @@ const router = express.Router();
 import passport from 'passport';
 
 import { googleAuth, userRegistration, organiserRegistration, otpVerification, userLogin, organiserLogin, logout, afterGoogleAuth, sendInvite, getQR, adminLogin, markVisited, checkInviteValidity } from '../controller/authController.js';
-import { auth, isAdmin, isOrganiser } from '../middlewares/auth.js';
+import { auth, isAdmin, isOrganiser } from '../middleware/auth.js';
 
 
 // user and organiser registration

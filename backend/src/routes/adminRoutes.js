@@ -1,6 +1,6 @@
 import express from "express";
 import { adminDashboard, approveReq, eventApproval, getAllIssues, issueResolved, rejectReq } from "../controller/adminController.js";
-import { auth, isAdmin } from "../middlewares/auth.js";
+import { auth, isAdmin } from "../middleware/auth.js";
 
 const router = express.Router();
 

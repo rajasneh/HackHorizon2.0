@@ -5,6 +5,7 @@ const app = express();
 import passport from './config/passport.js';
 import dotenv from 'dotenv';
 import multer from "multer";
+import { Server } from "socket.io"
 import http from 'http';
 dotenv.config();
 
@@ -12,9 +13,7 @@ const server = http.createServer(app);
 const io = new Server(server, { // Initialize Socket.IO with the http server
     cors: {
         origin: [
-            "http://localhost:5173",
-            "https://tktplz-05.vercel.app",
-            "https://www.tktplz.me" // add your final production domain here
+            "http://localhost:5173"
         ],
         credentials: true,
         methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
@@ -22,12 +21,20 @@ const io = new Server(server, { // Initialize Socket.IO with the http server
         exposedHeaders: ["Content-Disposition"]
     }
 });
+//     cors: {
+//         origin: [
+//             "http://localhost:5173"
+//         ],
+//         credentials: true,
+//         methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+//         allowedHeaders: ["Content-Type", "Authorization"],
+//         exposedHeaders: ["Content-Disposition"]
+//     }
+// });
 
 app.use(cors({
     origin: [
-        "http://localhost:5173",
-        "https://tktplz-05.vercel.app",
-        "https://www.tktplz.me" // add your final production domain here
+        "http://localhost:5173"
     ],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
@@ -60,15 +67,6 @@ app.use("/api/auth", authRoutes);
 import adminRoutes from './routes/adminRoutes.js';
 app.use("/api/admin", adminRoutes);
 
-import bookingRoutes from './routes/bookingRoutes.js';
-app.use("/api/booking", bookingRoutes);
-
-import paymentRoutes from './routes/paymentRoutes.js';
-app.use("/api/payment", paymentRoutes);
-
-import ticketRoutes from './routes/ticketRoutes.js';
-app.use("/api/ticket", ticketRoutes);
-
 import userRoutes from './routes/userRoutes.js';
 app.use("/api/user", userRoutes);
 
@@ -88,7 +86,7 @@ export const getIO = () => {
 };
 
 app.get('/', (req, res) => {
-    res.send('Welcome to the Tktplz API');
+    res.send('Welcome to the API');
 })
 
 // Start server

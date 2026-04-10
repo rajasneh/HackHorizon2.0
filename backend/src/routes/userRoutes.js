@@ -1,6 +1,6 @@
 import express from 'express';
 const router = express.Router();
-import { upload } from '../middlewares/multer.js';
+import { upload } from '../middleware/multer.js';
 
 import { generateTktQR, getOrders, likeEvent, unlikeEvent, submitIssue } from '../controller/userController.js';
 
